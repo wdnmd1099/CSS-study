@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.x1{
+    border: 2px solid red; 
+    display: flex;
+    position: absolute;  
+    /* 脱离文档流 可以看到元素重叠了因为.x1的div已经没有了高度，
+    这只是一个可视元素position: absolute;  */
+
+    /* 然后放开下面两句 就能看到响应式的 */
+    bottom: 50px;
+    left: 50px;
+
+    /* 用以前的padding margin 定位就不是响应式的 
+       用padding margin 的话还要在.x1外面加一层div，让x1脱离外面的div的文档流
+       然后再加padding和margin，就做出了以前那种不能响应的页面
+    */
+
+    /* padding-left: 50px;
+    padding-bottom: 50px; */
+}
+.x2{
+    width: 50px;
+    height: 50px;
+    border: 2px solid green;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.t1{
+    border: 1px solid blue;
+    height: 100px;
+    width: 100px;
+}
